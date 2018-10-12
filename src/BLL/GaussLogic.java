@@ -20,10 +20,6 @@ public class GaussLogic {
                         multiplyRow(matrix, coefficient, y);
                         deductRow(matrix, tempY + 1, y);
                         copyRow(original, matrix, x,y);
-
-
-                        System.out.println("-------------");
-                        printMatrix(matrix);
                     }
                     tempY++;
                 }
@@ -32,13 +28,8 @@ public class GaussLogic {
             x++;
             y++;
         }
-//        normalize(matrix);
-//        goToBack(matrix);
-//        System.out.println("-------------");
-//        printMatrix(matrix);
+        goToBack(matrix);
         normalize(matrix);
-//        System.out.println("--------------");
-//        printMatrix(matrix);
         System.out.println("Get it");
     }
 
@@ -66,7 +57,6 @@ public class GaussLogic {
                     multiplyRow(matrix, coefficient, y);
                     deductRow(matrix, tempY - 1, y);
                     copyRow(original, matrix, x,y);
-
                 }
                 tempY--;
             }
